@@ -1,0 +1,56 @@
+//$ColorPrimary: red;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.buttonDelete {
+  background: red;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin-right: 10px;
+
+  &:hover {
+    background: darkred;
+  }
+}
+
+.app-header {
+  background: #333;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+}
+
+.new-todo-form {
+  display: flex;
+
+  .input-field {
+    flex: 10;
+    padding: 10px;
+  }
+
+  .btn {
+    flex: 1;
+    background: green;
+    color: white;
+    border: none;
+  }
+}
