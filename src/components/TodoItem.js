@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export class TodoItem extends Component {
     setStyles = () => {
         return {
-            background: "#E0E0E0",
+            background: "none",
             padding: "10px",
             margin: "0px",
             textDecoration: this.props.todo.completed ? 'line-through' : 'none'
@@ -17,9 +17,12 @@ export class TodoItem extends Component {
         return (
             <div style={this.setStyles()}>
                 <p>
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
+                    <label className="check-container">
+                        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
+                        <span className="checkmark"></span>
+                    </label>
                     {title}
-                    <button onClick={this.props.deleteItem.bind(this, id)} className="buttonDelete">x</button>
+                    <button onClick={this.props.deleteItem.bind(this, id)} className="buttonDelete"><strong>X</strong></button>
                 </p>
             </div>
         )

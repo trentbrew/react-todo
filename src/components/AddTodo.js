@@ -17,8 +17,8 @@ export class AddTodo extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit} className="new-todo-form">
-                <input className="input-field" type="text" name="title" placeholder="Add Todo ..." onChange={this.onChange} value={this.state.title} />
-                <input className="btn-submit" type="submit" value="Submit" className="btn" />
+                <input id="text-field" className="input-field" type="text" name="title" placeholder="Type a new todo" onChange={this.onChange} value={this.state.title} />
+                <input id="button-submit" className="btn-submit" type="submit" value="Add" className="btn" />
             </form>
         )
     }
@@ -26,6 +26,10 @@ export class AddTodo extends Component {
 
 AddTodo.propTypes = {
     addTodo: PropTypes.func.isRequired
+}
+
+const dynamicStyles = {
+    backgroundColor: "red"
 }
 
 export default AddTodo;
